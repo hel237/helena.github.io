@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="./moi.css">
+</head>
+<body>
+     
+
+ <header>
+    <div class="logo"> </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li>
+          <a href="#">Services ▾</a>
+          <ul class="submenu">
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Développement</a></li>
+            <li><a href="#">SEO</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">À propos ▾</a>
+          <ul class="submenu">
+            <li><a href="#">Notre histoire</a></li>
+            <li><a href="#">L’équipe</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Galerie</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="burger">☰</div>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenue sur vision</h1>
+    <p>le temps passe mais l'idée reste.</p>
+    <a href="#" class="btn">En savoir plus</a>
+  </section>
+
+  <main class="content">
+    <section>
+      <h2>Nos Services</h2>
+      <p>Texte de démonstration sur les services proposés.</p>
+    </section>
+    <section>
+      <h2>Notre équipe</h2>
+      <p>Description de l’équipe et de son expertise.</p>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <p>Formulaire ou informations de contact.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Art nova</p>
+  </footer>
+
+  <script>
+    // Script simple pour menu burger sur mobile
+    const burger = document.querySelector(".burger");
+    const navbar = document.querySelector(".navbar ul");
+    burger.addEventListener("click", () => {
+      navbar.classList.toggle("show");
+    });
+  </script>
+
+</body>
+</html>

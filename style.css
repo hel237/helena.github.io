@@ -1,0 +1,172 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* --------- Header --------- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0a3d62;
+      color: #fff;
+      padding: 1rem 2rem;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      position: relative;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #f1c40f;
+    }
+
+    /* --------- Sous-menus --------- */
+    .submenu {
+      display: none;
+      position: absolute;
+      background: #0a3d62;
+      list-style: none;
+      padding: 0.5rem;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+    }
+
+    .submenu li {
+      margin: 0.5rem 0;
+    }
+
+    .submenu a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar li:hover .submenu {
+      display: block;
+    }
+
+    /* --------- Burger Menu --------- */
+    .burger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* --------- Hero --------- */
+    .hero {
+      background: url("https://picsum.photos/1600/600") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background: #f1c40f;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #d4ac0d;
+    }
+
+    /* --------- Main Content --------- */
+    main {
+      padding: 3rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    main section {
+      background: #f4f4f4;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* --------- Footer --------- */
+    footer {
+      background: #0a3d62;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* --------- Responsive Design --------- */
+    @media (max-width: 900px) {
+      main {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .navbar ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #0a3d62;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+      }
+
+      .navbar ul.show {
+        display: flex;
+      }
+
+      .burger {
+        display: block;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
